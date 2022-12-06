@@ -7,6 +7,7 @@ inputs.forEach(input => {
             input.nextElementSibling.classList.add('float');
         } else {
             input.nextElementSibling.classList.remove('float');
+            input.classList.remove('valid');
         }
     })
 });
@@ -26,6 +27,13 @@ form.addEventListener('submit', (event) => {
             input.classList.add('valid');
             errorMsg.innerHTML = '';
             input.parentElement.querySelector('.error-icon').classList.add('hidden');
+            if(input.type === 'text' && !validateName(input.value)) {
+                console.log('oi');
+                input.classList.add('error');
+                input.classList.remove('valid');
+                errorMsg.innerHTML = label + " is in an invalid format";
+                input.parentElement.querySelector('.error-icon').classList.remove('hidden');
+            }
             if(input.type === 'email' && !validateEmail(input.value)) {
                 input.classList.add('error');
                 input.classList.remove('valid');
@@ -43,3 +51,11 @@ const validateEmail = (email) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
+
+const validateName = (name) => {
+    return String(name)
+        .toLowerCase()
+        .match(
+            /^[a-zñáéíóãéúü]+$/i
+        )
+};
