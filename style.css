@@ -1,0 +1,282 @@
+:root {
+    --clr-red: hsl(0, 100%, 74%);
+    --clr-green: hsl(154, 59%, 51%);
+    --clr-blue: hsl(248, 32%, 49%);
+    --clr-dark-blue: hsl(249, 10%, 26%);
+    --clr-greyish-blue: hsl(246, 25%, 77%);
+
+    --ff-primary: 'Poppins', sans-serif;
+
+    --fw-light: 400;
+    --fw-primary: 500;
+    --fw-thick: 600;
+    --fw-bold: 700;
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  min-height: 100%;
+}
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+body {
+    display: grid;
+    place-content: center;
+    background-image: url('./images/bg-intro-mobile.png');
+    background-repeat: repeat;
+    background-size: contain;
+    background-color: var(--clr-red);
+    font-family: var(--ff-primary);
+}
+
+.container {
+  margin: 4rem 0;
+  max-width: 600px;
+}
+
+.hero {
+    margin: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-title {
+    color: #fff;
+    text-align: center;
+}
+
+.hero-description {
+    text-align: center;
+    color: #fff;
+    font-weight: var(--fw-light);
+    font-weight: var(--fw-primary);
+}
+
+.hero-trial {
+    background-color: var(--clr-blue);
+    color: var(--clr-greyish-blue);
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 8px;
+    box-shadow: 0px 8px 0px -1px rgba(0,0,0,0.17);
+}
+
+.bold {
+    color: #fff;
+    font-weight: var(--fw-bold);
+}
+
+.hero-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form {
+    background-color: #fff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.4rem;
+    box-shadow: 0px 8px 0px -1px rgba(0,0,0,0.17);
+}
+
+.form-control {
+  width: 100%;
+  position: relative;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border: 1px solid var(--clr-greyish-blue);
+    border-radius: 8px;
+    font-weight: var(--fw-thick);
+}
+
+.form-input:focus {
+    outline: none;
+    border: 1px solid var(--clr-blue);
+}
+
+.form-control label {
+  font-weight: var(--fw-thick);
+  color: hsla(249, 10%, 26%, 0.678);
+  padding: 1rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  pointer-events: none;
+}
+
+.form-input:focus + label {
+  font-size: 12px;
+  top: -7px;
+  left: 10px;
+  background: #fff;
+  padding: 0px 5px 0px 5px;
+}
+
+.float {
+  position: absolute;
+  font-size: 12px;
+  top: -7px !important;
+  left: 10px !important;
+  background: #fff;
+  padding: 0px 5px 0px 5px !important;
+}
+
+.form-input.error {
+  border: 1px solid var(--clr-red);
+}
+
+.form-input.valid {
+  border: 1px solid var(--clr-green);
+}
+
+.form-control > .error-msg {
+  font-size: 12px;
+  color: var(--clr-red);
+  font-weight: var(--fw-thick);
+  text-align: right;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+.error-icon {
+  font-size: 1.4rem;
+  color: var(--clr-red);
+  position: absolute;
+  top: 20%;
+  left: 88%;
+}
+
+.error-icon.hidden {
+  visibility: hidden;
+}
+
+.submit-btn {
+    background-color: var(--clr-green);
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0px 4px 0px -1px rgba(36,168,38,1);
+}
+
+.form-conditions {
+    width: 90%;
+    color: var(--clr-greyish-blue);
+    font-size: .7rem;
+    text-align: center;
+}
+
+.terms-link {
+    text-decoration: none;
+    color: var(--clr-red);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+@media(min-width: 1000px) {
+
+  html, body {
+    height: 100%;
+  }
+
+    body {
+        background-image: url('./images/bg-intro-desktop.png');
+        background-repeat: repeat;
+        background-size: cover;
+    }
+
+    .container {
+        max-width: 1200px;
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-text {
+        justify-content: center;
+    }
+
+    .hero-title {
+        text-align: start;
+        font-size: 3.4rem;
+    }
+
+    .hero-description {
+        text-align: start;
+    }
+
+    .error-icon {
+      left: 90%;
+    }
+
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <main class="hero">
+      <div class="hero-text">
+        <h1 class="hero-title">Learn to code by watching others</h1>
+        <p class="hero-description">See how experienced developers solve problems in real-time. Watching scripted
+          tutorials is great, but understanding how developers think is invaluable.</p>
+      </div>
+      <div class="hero-form">
+        <div class="hero-trial"><span class="bold">Try it free 7 days</span> then $20/mo. thereafter</div>
+        <form action="" class="form" autocomplete="off" novalidate>
+          <div class="form-control">
+            <input class="form-input" type="text" name="firstname" id="firstname">
+            <label for="firstname">First Name</label>
+            <div class="error-msg"></div>
+            <i class="fa-solid fa-circle-exclamation error-icon hidden"></i>
+          </div>
+          <div class="form-control">
+            <input class="form-input" type="text" name="lastname" id="lastname">
+            <label for="lastname">Last Name</label>
+            <div class="error-msg"></div>
+            <i class="fa-solid fa-circle-exclamation error-icon hidden"></i>
+          </div>
+          <div class="form-control">
+            <input class="form-input" type="email" name="email" id="email">
+            <label for="email">Email Address</label>
+            <div class="error-msg"></div>
+            <i class="fa-solid fa-circle-exclamation error-icon hidden"></i>
+          </div>
+          <div class="form-control">
+            <input class="form-input" type="password" name="password" id="password">
+            <label for="password">Password</label>
+            <div class="error-msg"></div>
+            <i class="fa-solid fa-circle-exclamation error-icon hidden"></i>
+          </div>
+          <button class="submit-btn">Claim your free trial</button>
+          <div class="form-conditions">By clicking the button, you are agreeing to our
+            <a class="terms-link" href="#">Terms and Services</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+  integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="./script.js"></script>
+
+</html>
